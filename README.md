@@ -78,7 +78,10 @@ while True:
     except KeyError:
         c.send("Not Found".encode())
 
+```
+
 Server
+
 ```
 import socket
 
@@ -89,6 +92,7 @@ while True:
     ip = input("Enter MAC Address : ")
     s.send(ip.encode())
     print("Logical Address", s.recv(1024).decode())
+    
 ```
 
 ## OUPUT -RARP
