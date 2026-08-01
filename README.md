@@ -77,23 +77,24 @@ while True:
         c.send(address[ip].encode())
     except KeyError:
         c.send("Not Found".encode())
-```
 
 Server
 ```
 import socket
 
 s = socket.socket()
-s.connect(('localhost', 8000))
+s.connect(('localhost', 9000))
 
 while True:
-    ip = input("Enter logical Address : ")
+    ip = input("Enter MAC Address : ")
     s.send(ip.encode())
-    print("MAC Address", s.recv(1024).decode())
+    print("Logical Address", s.recv(1024).decode())
 ```
 
 ## OUPUT -RARP
-<img width="1876" height="1030" alt="Screenshot 2026-08-01 115415" src="https://github.com/user-attachments/assets/66c7316f-e6af-4774-9b12-9c08ad604561" />
+
+<img width="1912" height="1013" alt="Screenshot 2026-08-01 132340" src="https://github.com/user-attachments/assets/13ec4d2a-19dc-4cc1-a5f4-08f18ff0ff16" />
+
 
 
 ## RESULT
